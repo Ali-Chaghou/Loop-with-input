@@ -28,6 +28,7 @@ section {
     background: rgba(0, 0, 0, 0.5);
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: 3px -5px 8px 7px rgba(0, 0, 0, 0.71);
 }
 
 section::before {
