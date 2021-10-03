@@ -5,6 +5,12 @@
     margin: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 section {
     display: flex;
     justify-content: center;
@@ -12,23 +18,74 @@ section {
     flex-direction: column;
     gap: 15px;
     margin-top: 100px;
+    position: relative;
+    width: 330px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-form {
+section::before {
+    content: ' ';
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animate 4s linear infinite;
+}
+
+section::after {
+    content: ' ';
+    position: absolute;
+    inset: 4px;
+    background-image: linear-gradient(117deg, #aaadbd 30%, #cdccd4 30%, #cdccd4 50%, #aaadbd 50%, #aaadbd 80%, #cdccd4 80%, #cdccd4 100%);
+    background-size: 150.00px 294.39px;
+    border-radius: 16px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+section form h2 {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+    color: #04181d;
+    text-align: center;
+    font-size: 2.6em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section form {
+    margin-top: 20px;
     width: 250px;
     height: 60px;
-    border: 2px solid #333;
     padding: 20px;
+    z-index: 1000;
 }
 
 [name="button"] {
     width: 100px;
     text-align: center;
+    z-index: 1000;
 }
 
 [name="inputNumber"] {
-    width: 80px;
+    width: 100px;
     text-align: center;
+    z-index: 1000;
 }
 
 .result {
@@ -36,9 +93,11 @@ form {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    color: #619f05;
-    font-size: 30px;
+    background-color: #fff;
+    color: #00ff1e;
+    font-size: 3em;
     text-align: center;
+    z-index: 1000;
 }
 
 .error {
@@ -47,6 +106,8 @@ form {
     align-items: center;
     margin-top: 20px;
     color: #f20404;
-    font-size: 30px;
+    background-color: #fff;
+    font-size: 3em;
     text-align: center;
+    z-index: 1000;
 }
