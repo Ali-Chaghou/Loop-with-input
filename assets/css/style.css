@@ -95,10 +95,12 @@ section form {
     align-items: center;
     margin-top: 20px;
     background-color: #fff;
+    border-radius: 5px;
     color: #00ff1e;
     font-size: 3em;
     text-align: center;
     z-index: 1000;
+    box-shadow: 3px -5px 8px 7px rgba(0, 0, 0, 0.1);
 }
 
 .error {
@@ -108,7 +110,9 @@ section form {
     margin-top: 20px;
     color: #f20404;
     background-color: #fff;
+    border-radius: 5px;
     font-size: 3em;
     text-align: center;
     z-index: 1000;
+    box-shadow: 3px -5px 8px 7px rgba(85, 54, 54, 0.1);
 }
