@@ -1,52 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+section,
+section .error,
+section .result,
 body {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+section .error,
+section .result {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 3em;
+    text-align: center;
+    z-index: 1000;
+}
+
+form [name=inputNumber],
+form [name=button] {
+    width: 100px;
+    text-align: center;
+    z-index: 1000;
+}
+
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: 15px;
-    margin-top: 100px;
     position: relative;
+    margin-top: 100px;
     width: 330px;
     height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
     border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 3px -5px 8px 7px rgba(0, 0, 0, 0.71);
 }
 
 section::before {
-    content: ' ';
+    content: " ";
     position: absolute;
     width: 150px;
     height: 140%;
     background: linear-gradient(#00ccff, #d400d4);
+    -webkit-animation: animate 4s linear infinite;
     animation: animate 4s linear infinite;
 }
 
 section::after {
-    content: ' ';
+    content: " ";
     position: absolute;
     inset: 4px;
     background-image: linear-gradient(117deg, #aaadbd 30%, #cdccd4 30%, #cdccd4 50%, #aaadbd 50%, #aaadbd 80%, #cdccd4 80%, #cdccd4 100%);
-    background-size: 150.00px 294.39px;
+    background-size: 150px 294.39px;
     border-radius: 16px;
+}
+
+@-webkit-keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes animate {
@@ -58,18 +81,17 @@ section::after {
     }
 }
 
-section form h2 {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    z-index: 10;
-    color: #04181d;
-    text-align: center;
-    font-size: 2.6em;
-    font-family: 'Ubuntu', sans-serif;
+section .result {
+    color: #00ff1e;
+    box-shadow: 3px -5px 8px -7px rgba(0, 0, 0, 0.5);
 }
 
-section form {
+section .error {
+    color: #f20404;
+    box-shadow: 3px -5px 8px 1px rgba(85, 54, 54, 0.5);
+}
+
+form {
     margin-top: 20px;
     width: 250px;
     height: 60px;
@@ -77,42 +99,16 @@ section form {
     z-index: 1000;
 }
 
-[name="button"] {
-    width: 100px;
+form h2 {
+    position: absolute;
     text-align: center;
-    z-index: 1000;
+    font-size: 2.6em;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+    color: #04181d;
+    font-family: "Ubuntu", sans-serif;
 }
 
-[name="inputNumber"] {
-    width: 100px;
-    text-align: center;
-    z-index: 1000;
-}
 
-.result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    color: #00ff1e;
-    font-size: 3em;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 3px -5px 8px -7px rgba(0, 0, 0, 0.5);
-}
-
-.error {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    color: #f20404;
-    background-color: #fff;
-    border-radius: 5px;
-    font-size: 3em;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 3px -5px 8px 1px rgba(85, 54, 54, 0.5);
-}
+/*# sourceMappingURL=style.css.map */
