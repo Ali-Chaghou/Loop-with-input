@@ -100,7 +100,7 @@ section form {
     font-size: 3em;
     text-align: center;
     z-index: 1000;
-    box-shadow: 3px -5px 8px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px -5px 8px -7px rgba(0, 0, 0, 0.5);
 }
 
 .error {
@@ -114,5 +114,5 @@ section form {
     font-size: 3em;
     text-align: center;
     z-index: 1000;
-    box-shadow: 3px -5px 8px 7px rgba(85, 54, 54, 0.1);
+    box-shadow: 3px -5px 8px 1px rgba(85, 54, 54, 0.5);
 }

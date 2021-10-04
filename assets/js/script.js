@@ -3,7 +3,7 @@
 
 let inputNumber = document.querySelector('#inputNumber');
 let result = document.querySelector('#result');
-let error = document.querySelector('#error');
+let error = document.querySelector('.error');
 let btn = document.querySelector('.btn');
 
 
