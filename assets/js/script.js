@@ -8,6 +8,8 @@ let btn = document.querySelector('.btn');
 
 
 const superLooop = () => {
+    error.innerHTML = '';
+    result.innerHTML = '';
     if (inputNumber.value == 0) {
         error.innerHTML = 'ERROR';
         return;
@@ -25,7 +27,6 @@ const superLooop = () => {
     }
     text += 'p';
     result.innerHTML = text;
-    error.innerHTML = '';
     console.log(inputNumber.value);
 };
 
